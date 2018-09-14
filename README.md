@@ -1,6 +1,6 @@
 [![API](https://img.shields.io/badge/API-19%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=21) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-<img src="https://github.com/BrandonMHogan/LiftScout-Android/blob/develop/store/app_icon_512_arrow.png" align="left" height="48" width="48" >
+<img src="https://github.com/BrandonMHogan/LiftScout-Android/blob/master/store/app_icon_512_arrow.png" align="left" height="48" width="48" >
 
 #  LiftScout
 
