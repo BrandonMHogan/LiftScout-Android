@@ -1,17 +1,28 @@
 package brandonhogan.com.liftscout.ui.main
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
 
-    private val _data = MutableLiveData<String>()
+    object _data: MutableLiveData<String>()
 
-    val data: LiveData<String>
-        get() = _data
+    fun data(): MutableLiveData<String> {
+        return _data
+    }
 
     init {
-        _data.value = "Hello Whatever!"
+
     }
+
+
+
+//    private val _data = MutableLiveData<String>()
+//
+//    val data: MutableLiveData<String>
+//
+//    init {
+//        _data.value = "Hello Whatever!"
+//    }
 }

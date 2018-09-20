@@ -1,14 +1,22 @@
 package brandonhogan.com.liftscout
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
+import brandonhogan.com.liftscout.databinding.MainActivityBinding
 import brandonhogan.com.liftscout.ui.main.MainFragment
+import brandonhogan.com.liftscout.ui.main.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+
+        val binding = DataBindingUtil.setContentView<MainActivityBinding>(this, R.layout.main_activity)
+        binding.model = ViewModelProviders.of(this).get(MainViewModel::class.java)
+
+
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                     .replace(R.id.container, MainFragment.newInstance())
